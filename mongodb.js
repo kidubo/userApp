@@ -24,13 +24,13 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true , useUnifiedTopology:
 
     const dataBase = client.db(databaseName)
 
-    dataBase.collection('tasks').find({ complete : false}).toArray((error, task)=>{
-        if(error){
-            return console.log('please try another search')
-        }
+    // dataBase.collection('tasks').find({ complete : false}).toArray((error, task)=>{
+    //     if(error){
+    //         return console.log('please try another search')
+    //     }
 
-        console.log(task)
-    })
+    //     console.log(task)
+    // })
 
 
     // dataBase.collection('tasks').find({ complete : false}).count((error, task)=>{
