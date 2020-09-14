@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require ('validator')
+const bcrypt = require ('bcryptjs')
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -38,8 +39,14 @@ const userSchema = new mongoose.Schema({
     },
 })
 
+userSchema.pre('save', function (next) {
+    const user = this
+
+    console.log('just before saving')
+
+    next()
+})
+
 const  Users = mongoose.model('Users', userSchema) 
-
-
 
 module.exports = Users

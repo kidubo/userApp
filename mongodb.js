@@ -24,6 +24,44 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true , useUnifiedTopology:
 
     const dataBase = client.db(databaseName)
 
+    // dataBase.collection("tasks").deleteOne({
+    //     description:"learn python"
+    // }).then((result)=>{
+    //   console.log(result)
+    // }).catch((error)=>{
+    //   console.log(error)
+    // })
+
+    // dataBase.collection('users').deleteMany({ age : 24}).then((result)=>{
+    //   console.log(result)
+    // }).catch((error)=>{
+    //   console.log(error)
+    // })
+
+    // dataBase.collection("tasks").updateMany({ complete: true }, {
+    //   $set : {
+    //     complete: false
+    //   }
+    // }).then((result)=>{
+    //   console.log(result)
+    // }).catch((error)=>{
+    //   console.log(error)
+    // })
+
+    // dataBase.collection('users').updateOne({
+    //     _id: new ObjectID("5f5afd28d2125044dcb2366e")
+    // }, {
+    //   // Update operarator to define the behavior we wanna updates
+    //   $set: {
+    //     name:"malonja",
+    //     age:21
+    //   }
+    // }).then((result)=>{
+    //     console.log(result)
+    // }).catch((error)=>{
+    //   console.log(error)
+    // })
+
     // dataBase.collection('tasks').find({ complete : false}).toArray((error, task)=>{
     //     if(error){
     //         return console.log('please try another search')
