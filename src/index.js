@@ -14,9 +14,9 @@ const port = process.env.PORT || 2019
 //     }
 // })
 
-app.use((req, res, next)=>{
-    res.status(503).send(' maintainance mode')
-})
+// app.use((req, res, next)=>{
+//     res.status(503).send(' maintainance mode')
+// })
 
 
 // this is where and how we set up our middleware
