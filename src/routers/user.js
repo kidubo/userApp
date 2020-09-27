@@ -107,14 +107,9 @@ router.delete('/users/me', auth, async (req, res)=>{
 
         try {
 
-            // const user = await User.findByIdAndDelete(req.user._id)
-            // if(!user){
-            //      return res.status(404).send("Cant find user to delete try another search")
-            // }
-            // res.send(user)
-
         await req.user.remove()
         res.send(req.user)
+
         } catch (e) {
             res.status(500).send(e)
         }
