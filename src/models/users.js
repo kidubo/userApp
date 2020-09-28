@@ -6,6 +6,9 @@ const Task = require('./tasks')
 
 
 const userSchema = new mongoose.Schema({
+    avatar: {
+        type: Buffer
+    },
     name:{
             type: String,
             required: true,
@@ -64,6 +67,7 @@ userSchema.methods.toJSON = function () {
 
     delete userObject.password
     delete userObject.tokens
+    delete userObject.avatar
 
     return userObject
 }
