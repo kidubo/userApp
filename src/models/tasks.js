@@ -9,7 +9,7 @@ taskSchema = new mongoose.Schema({
     },
     complete: {
         type: Boolean,
-        default: 'false'
+        default: false
     },
     owner:{
         type: mongoose.Schema.Types.ObjectId,

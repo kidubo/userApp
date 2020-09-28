@@ -1,5 +1,7 @@
 node_modules/
 playgroundfile/
+avatars/
+images/
 
 // middleware is way to costomize the behavior of your model/schema
 // with middleware you can  register some function to run b4 or even after event occur
