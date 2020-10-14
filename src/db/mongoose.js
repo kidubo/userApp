@@ -1,13 +1,12 @@
-const mongoose = require ('mongoose')
+const mongoose = require('mongoose')
 
-const url = 'mongodb://127.0.0.1:27017/TaskManager-API'
+const url = process.env.DATABASE_URL
 
-mongoose.connect( url,
-    { 
-    useNewUrlParser: true, 
-    useCreateIndex: true ,  
+mongoose.connect(url, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true
-   })
+})
 
 //    const  Users = mongoose.model('Users', {
 //             name:{
