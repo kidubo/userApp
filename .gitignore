@@ -1,7 +1,7 @@
 node_modules/
 playgroundfile/
 mongodb.js/
-
+config/
 
 
 // middleware is way to costomize the behavior of your model/schema
