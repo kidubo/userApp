@@ -13,11 +13,9 @@ const sendWelcomeEmail = (email, name) => {
         })
         .then(() => { console.log('Email sent') })
         .catch((error) => { console.error(error) })
-
 }
 
-
-const sendCancelationEmail = (email, name) => {
+function sendCancelationEmail(email, name) {
     sgMail
         .send({
             to: email,
